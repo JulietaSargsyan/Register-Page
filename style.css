@@ -305,7 +305,7 @@ input:focus {
     box-shadow: none;
 }
 
-input[type=submit] {
+input[type=button] {
     margin: 0 auto;
     width: 30%;
     background: #833ab4;
@@ -328,5 +328,9 @@ form p {
     color: #ff4784;
 }
 
+
+#loginBtn {
+    display: none;
+}
 
 

@@ -46,11 +46,11 @@
     <div class="pop-up">
         <div class="pop-up__container">
             <form action="">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
+                <label for="name" class="hide">Name</label>
+                <input type="text" name="name" class="hide" id="name">
                 <br>
-                <label for="surname">Surname</label>
-                <input type="text" name="surname" id="surname">
+                <label for="surname" class="hide">Surname</label>
+                <input type="text" name="surname" class="hide" id="surname">
                 <br>
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="email">
@@ -58,11 +58,12 @@
                 <label for="password">Password</label>
                 <input type="password" id="password">
                 <br>
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password">
+                <label for="confirm-password" class="hide">Confirm Password</label>
+                <input type="password" class="hide" id="confirm-password">
                 <br>
-                <p>Already have an account? <span id="login">Log In</span></p>
-                <input type="submit" class="button" value="Sign Up" onclick="register()">
+                <p class="hide">Already have an account? <span id="login" onclick="loginPopUp()">Log In</span></p>
+                <input type="button"  class="button hide" value="Sign Up" onclick="register()">
+                <input type="button" id="loginBtn" class="button" value="Log In" onclick="login()">
             </form>
         </div>
     </div>

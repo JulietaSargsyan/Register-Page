@@ -76,8 +76,10 @@ const firebaseConfig = {
     .catch(function(error) {
         var error_code = error.code;
         var error_message = error.message;
-        console.log(error_message);
+        alert(error_message);
     })
+
+
   }
 
 
@@ -104,6 +106,61 @@ const firebaseConfig = {
     if(field == null || field.length<=0) return false;
     return true;
   }
+
+
+  function loginPopUp() {
+    let name = document.getElementById('name');
+    let surname = document.getElementById('surname');
+    let confirmPassword = document.getElementById('confirm-password');
+    let hide = document.getElementsByClassName('hide');
+    let loginBtn = document.querySelector('#loginBtn');
+
+
+    for (var i=0;i<hide.length;i++){
+            hide[i].style.display = 'none';
+    }
+
+    name.style.display = 'none';
+    surname.style.display = 'none';
+    confirmPassword.style.display = 'none';
+
+    loginBtn.style.display = 'block'
+
+}
+
+function login() {
+    alert('login')
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+
+    //validation 
+
+    // if(validateEmail(email) == false) {
+    //     alert('Email is not valid!!!');
+    //     return;
+    // } 
+    // if(validatePassword(password) == false) {
+    //     alert('Password must conatin at least 6 charachters');
+    //     return
+
+    // }
+    
+    auth.signInWithEmailAndPassword(email, password)
+    .then(function() {
+        var user = auth.currentUser;
+
+        var database_ref = database.ref();
+
+
+        alert("Logged In!!!")
+
+    }).catch(function(error) {
+        var error_code = error.code;
+        var error_message = error.message;
+        alert(error_message);
+    })
+
+}
 
 
   
