@@ -1,6 +1,8 @@
 const menu = document.querySelector('#mobile-menu');
-
 const menuLinks = document.querySelector('.navBar__menu');
+const signup = document.querySelector('#signup');
+const closeBtn = document.querySelector('.closeBtn')
+const popUp = document.querySelector('.pop-up');
 
 const mobileMenu = () => {
     menu.classList.toggle('is-active');
@@ -9,9 +11,17 @@ const mobileMenu = () => {
 
 menu.addEventListener('click', mobileMenu);
 
-const signup = document.querySelector('#signup');
 
-signup.addEventListener('click', () => alert('hi'));
+
+signup.addEventListener('click', () => {  
+    popUp.style.display = 'block';
+})
+
+
+closeBtn.addEventListener('click', () => {
+    popUp.style.display = "none"
+})
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyB_TfpP17tOW38ivzhlyvsoFYNtpRyoKLk",
