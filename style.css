@@ -190,6 +190,7 @@
 }
 
 .hero {
+    height: 100vh;
     background: #000000;
     background: linear-gradient(to right, #161616, #000000);
     padding: 200px 0;
@@ -240,6 +241,7 @@
 
 .main__btn {
     margin-top: 50px;
+    height: auto;
 }
 
 .highlight {
