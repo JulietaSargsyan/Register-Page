@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navBar">
+        <div class="navBar__container">
+            <a href="#home" id="navBar__logo">Logo</a>
+            <div class="navBar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navBar__menu ">
+                <li class="navBar__item">
+                    <a href="#home" id="home-page" class="navBar__links">home</a>
+                </li>
+                <li class="navBar__item">
+                    <a href="#about" id="about-page" class="navBar__links">about</a>
+                </li>
+                <li class="navBar__item">
+                    <a href="#services" id="services-page" class="navBar__links">services</a>
+                </li>
+                <li class="navBar__btn">
+                    <a href="#signup" id="signup" class="button">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="hero" id="home">
+        <div class="hero__container">
+            <h1 class="hero__heading">Choose your <span>lorem</span></h1>
+            <p class="hero__description">Unlimited Possibilities</p>
+            <button class="main__btn button" style="width:200px ;">explore</button>
+        </div>
+    </div>
+
+    <div class="pop-up">
+        <div class="pop-up__container">
+            <form action="">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <br>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname">
+                <br>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password">
+                <br>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password">
+                <br>
+                <p>Already have an account? <span id="login">Log In</span></p>
+                <input type="submit" class="button" value="Sign Up" onclick="register()">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js'
+    
+        // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+        import { analytics } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js'
+    
+        // Add Firebase products that you want to use
+        import { auth } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js'
+        import { firestore } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-firestore.js'
+      </script> -->
+<script src="script.js"></script>
+
+</body>
+</html>
